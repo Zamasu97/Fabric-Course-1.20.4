@@ -1,6 +1,7 @@
 package net.benny.mccourse;
 
 import net.benny.mccourse.block.ModBlocks;
+import net.benny.mccourse.item.ModItemGroup;
 import net.benny.mccourse.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -16,8 +17,10 @@ public class MCCourseMod implements ModInitializer {
 	//test comment
 	@Override
 	public void onInitialize() {
+		ModItemGroup.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
