@@ -21,13 +21,13 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
-            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),FabricBlockSettings.copyOf(Blocks.STONE)));
     public static final Block DEEPSLATE_PINK_GARNET_ORE = registerBlock("deepslate_pink_garnet_ore",
-            new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE)));
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),FabricBlockSettings.copyOf(Blocks.DEEPSLATE)));
     public static final Block END_STONE_PINK_GARNET_ORE = registerBlock("end_stone_pink_garnet_ore",
-            new Block(FabricBlockSettings.copyOf(Blocks.END_STONE)));
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),FabricBlockSettings.copyOf(Blocks.END_STONE)));
     public static final Block NETHER_PINK_GARNET_ORE = registerBlock("nether_pink_garnet_ore",
-            new Block(FabricBlockSettings.copyOf(Blocks.NETHERRACK)));
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),FabricBlockSettings.copyOf(Blocks.NETHERRACK)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
