@@ -1,6 +1,7 @@
 package net.benny.mccourse.block;
 
 import net.benny.mccourse.MCCourseMod;
+import net.benny.mccourse.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -17,6 +18,9 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
+    public static final Block SOUND_BLOCK = registerBlock("sound_block",
+            new SoundBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
     public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),FabricBlockSettings.copyOf(Blocks.STONE)));
