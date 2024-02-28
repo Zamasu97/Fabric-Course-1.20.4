@@ -17,6 +17,15 @@ public class ModItems {
     public static final Item METAL_DETECTOR = registerItem("metal_detector",
             new MetalDetectorItem((new FabricItemSettings().maxDamage(256))));
 
+    public static final Item CAULIFLOWER = registerItem("cauliflower",
+            new Item(new FabricItemSettings().food((ModFoodComponents.CAULIFLOWER))));
+
+    public static final Item BAKED_CAULIFLOWER = registerItem("baked_cauliflower",
+            new Item(new FabricItemSettings().food((ModFoodComponents.BAKED_CAULIFLOWER))));
+
+    public static final Item SALTED_CAULIFLOWER = registerItem("salted_cauliflower",
+            new Item(new FabricItemSettings().food((ModFoodComponents.SALTED_CAULIFLOWER))));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);
