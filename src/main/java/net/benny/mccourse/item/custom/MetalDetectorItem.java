@@ -1,14 +1,22 @@
 package net.benny.mccourse.item.custom;
 
+import net.benny.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class MetalDetectorItem extends Item {
     public MetalDetectorItem(Settings settings) {
@@ -46,11 +54,21 @@ public class MetalDetectorItem extends Item {
         return ActionResult.SUCCESS;
     }
 
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if(Screen.hasShiftDown()){
+            tooltip.add(Text.translatable("tooltip.mccourse.metal_detector.tooltip.shift"));
+        }
+        else{
+            tooltip.add(Text.translatable("tooltip.mccourse.metal_detector.tooltip"));
+        }
+    }
+
     private void outputValuableCoordinates(BlockPos position, PlayerEntity player, Block block) {
         player.sendMessage(Text.literal("Valuable found " +block.getName().getString() + " @ " + position.getX() + " " + position.getY() + " " + position.getZ()));
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return state.getBlock() == Blocks.IRON_ORE || state.getBlock() == Blocks.GOLD_ORE || state.getBlock() == Blocks.DIAMOND_ORE || state.getBlock() == Blocks.REDSTONE_ORE;
+        return state.isIn(ModTags.Blocks.METAL_DETECTOR_DETECTABLE_BLOCKS); //state.getBlock() == Blocks.IRON_ORE || state.getBlock() == Blocks.GOLD_ORE || state.getBlock() == Blocks.DIAMOND_ORE || state.getBlock() == Blocks.REDSTONE_ORE;
     }
 }

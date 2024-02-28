@@ -5,6 +5,7 @@
   "item.mccourse.cauliflower": "Cauliflower",
   "item.mccourse.baked_cauliflower": "Baked Cauliflower",
   "item.mccourse.salted_cauliflower": "Salted and Baked Cauliflower",
+  "item.mccourse.peat_brick": "Peat Brick",
 
   "block.mccourse.pink_garnet_block": "Block of Pink Garnet",
   "block.mccourse.raw_pink_garnet_block": "Block of Raw Pink Garnet",
@@ -17,5 +18,9 @@
   "block.mccourse.end_stone_pink_garnet_ore": "End Stone Pink Garnet Ore",
   "block.mccourse.sound_block": "Sound Block",
 
-  "item.mccourse.metal_detector.no_valuables": "Nothing found in range"
+  "item.mccourse.metal_detector.no_valuables": "Nothing found in range",
+
+  "tooltip.mccourse.metal_detector.tooltip": "Press §eSHIFT§r to reveal more info",
+  "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Block to find Valuables",
+  "tooltip.mccourse.sound_block": "Plays a note when interacted"
 }
