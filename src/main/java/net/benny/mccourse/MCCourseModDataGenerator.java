@@ -1,8 +1,6 @@
 package net.benny.mccourse;
 
-import net.benny.mccourse.datagen.ModBlockLootTableGenerator;
-import net.benny.mccourse.datagen.ModBlockTagProvider;
-import net.benny.mccourse.datagen.ModItemTagProvider;
+import net.benny.mccourse.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -14,7 +12,8 @@ public class MCCourseModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockTagProvider::new);
 		pack.addProvider(ModItemTagProvider::new);
 		pack.addProvider(ModBlockLootTableGenerator::new);
-		pack.addProvider(ModBlockTagProvider::new);
+		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModRecipeGenerator::new);
 
 	}
 }

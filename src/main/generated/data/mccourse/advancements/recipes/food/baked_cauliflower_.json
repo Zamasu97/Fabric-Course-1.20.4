@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_baked_cauliflower": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mccourse:baked_cauliflower"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_dried_kelp": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dried_kelp"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:baked_cauliflower_"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_baked_cauliflower",
+      "has_dried_kelp"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:baked_cauliflower_"
+    ]
+  }
+}
