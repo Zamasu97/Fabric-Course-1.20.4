@@ -32,6 +32,15 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.RAW_PINK_GARNET) + "_"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PINK_GARNET_STAIRS)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .input('S',ModItems.PINK_GARNET)
+                .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                .offerTo(exporter,new Identifier(getRecipeName(ModBlocks.PINK_GARNET_STAIRS) + "_"));
+
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD,ModItems.SALTED_CAULIFLOWER)
                 .input(ModItems.BAKED_CAULIFLOWER)
                 .input(Items.DRIED_KELP)

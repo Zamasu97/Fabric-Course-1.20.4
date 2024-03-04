@@ -22,5 +22,9 @@
 
   "tooltip.mccourse.metal_detector.tooltip": "Press §eSHIFT§r to reveal more info",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Block to find Valuables",
-  "tooltip.mccourse.sound_block": "Plays a note when interacted"
+  "tooltip.mccourse.sound_block": "Plays a note when interacted",
+
+  "block.mccourse.pink_garnet_stairs": "Pink Garnet Stairs",
+  "block.mccourse.pink_garnet_slab": "Pink Garnet Slab"
+
 }
