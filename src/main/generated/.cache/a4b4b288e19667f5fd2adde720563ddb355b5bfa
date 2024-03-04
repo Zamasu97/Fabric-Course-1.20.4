@@ -1,9 +1,9 @@
-// 1.20.4	2024-03-04T11:29:46.9530891	MC Course Mod/Recipes
+// 1.20.4	2024-03-04T14:13:42.9819675	MC Course Mod/Recipes
 b94283ee9e9bd50833f7dc878612605d64b0e87f data\mccourse\advancements\recipes\misc\pink_garnet_block.json
 74df899ba2d83f35d04cb92a47345a51e255c3e9 data\mccourse\recipes\raw_pink_garnet_.json
 990cbfcb1d4fe8d623afcaf78f2679589aee54eb data\mccourse\advancements\recipes\misc\raw_pink_garnet_.json
 85547a86471161a09a34cbdff9fa67a5ba52b46f data\mccourse\recipes\pink_garnet_from_smelting_raw_pink_garnet.json
-de1441a193ee6d795d7482002092a24c5ed4dc48 data\mccourse\recipes\pink_garnet_stairs_.json
+8217f7bc3cb7076638f58bcf6208b1e22b6a8e1f data\mccourse\recipes\pink_garnet_stairs_.json
 9fd609426703c858f63a11a58c38cdee4a0d41f8 data\mccourse\advancements\recipes\misc\pink_garnet_from_smelting_nether_pink_garnet_ore.json
 a7833fb31b45c464950c332f6e5922a9c1a2e1e2 data\mccourse\advancements\recipes\misc\pink_garnet_from_blasting_deepslate_pink_garnet_ore.json
 8b42e1d70dc9d70a17caf9a5a14901e3ebf7af1f data\mccourse\recipes\baked_cauliflower_.json

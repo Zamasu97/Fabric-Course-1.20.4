@@ -28,6 +28,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         ModBlocks.END_STONE_PINK_GARNET_ORE,
                         ModBlocks.NETHER_PINK_GARNET_ORE,
                         ModBlocks.PINK_GARNET_SLAB,
+                        ModBlocks.PINK_GARNET_PRESSURE_PLATE,
                         ModBlocks.PINK_GARNET_STAIRS);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)

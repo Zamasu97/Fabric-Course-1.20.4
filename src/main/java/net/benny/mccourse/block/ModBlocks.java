@@ -37,6 +37,12 @@ public class ModBlocks {
     public static final Block PINK_GARNET_SLAB = registerBlock("pink_garnet_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
+    public static final Block PINK_GARNET_BUTTON = registerBlock("pink_garnet_button",
+            new ButtonBlock(BlockSetType.IRON,10,FabricBlockSettings.copyOf(Blocks.STONE_BUTTON)));
+
+    public static final Block PINK_GARNET_PRESSURE_PLATE = registerBlock("pink_garnet_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON,FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(MCCourseMod.MOD_ID, name), block);

@@ -25,6 +25,9 @@
   "tooltip.mccourse.sound_block": "Plays a note when interacted",
 
   "block.mccourse.pink_garnet_stairs": "Pink Garnet Stairs",
-  "block.mccourse.pink_garnet_slab": "Pink Garnet Slab"
+  "block.mccourse.pink_garnet_slab": "Pink Garnet Slab",
+
+  "block.mccourse.pink_garnet_button": "Pink Garnet Button",
+  "block.mccourse.pink_garnet_pressure_plate": "Pink Garnet Pressure Plate"
 
 }
