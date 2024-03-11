@@ -40,8 +40,23 @@ public class ModBlocks {
     public static final Block PINK_GARNET_BUTTON = registerBlock("pink_garnet_button",
             new ButtonBlock(BlockSetType.IRON,10,FabricBlockSettings.copyOf(Blocks.STONE_BUTTON)));
 
+    public static final Block PINK_GARNET_FENCE = registerBlock("pink_garnet_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE)));
+
+    public static final Block PINK_GARNET_FENCE_GATE = registerBlock("pink_garnet_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA,FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE)));
+
+    public static final Block PINK_GARNET_WALL = registerBlock("pink_garnet_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.NETHER_BRICK_FENCE)));
+
     public static final Block PINK_GARNET_PRESSURE_PLATE = registerBlock("pink_garnet_pressure_plate",
             new PressurePlateBlock(BlockSetType.IRON,FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE)));
+
+    public static final Block PINK_GARNET_DOOR = registerBlock("pink_garnet_door",
+            new DoorBlock(BlockSetType.IRON,FabricBlockSettings.copyOf(Blocks.IRON_DOOR)));
+
+    public static final Block PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_trapdoor",
+            new TrapdoorBlock(BlockSetType.IRON,FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

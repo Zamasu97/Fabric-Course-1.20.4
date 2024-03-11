@@ -3,6 +3,7 @@ package net.benny.mccourse.util;
 import net.benny.mccourse.item.ModItems;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.impl.content.registry.FuelRegistryImpl;
+import net.minecraft.block.BlockSetType;
 
 public class ModRegistries {
     public static void registerModStuffs(){

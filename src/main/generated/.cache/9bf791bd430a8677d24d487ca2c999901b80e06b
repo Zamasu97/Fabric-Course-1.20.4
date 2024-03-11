@@ -1,6 +1,9 @@
-// 1.20.4	2024-03-04T14:13:42.977926	MC Course Mod/Tags for minecraft:block
+// 1.20.4	2024-03-11T12:31:06.3176384	MC Course Mod/Tags for minecraft:block
+517632cca94e9946eb0ffa70b9c76633dbe1cf71 data\minecraft\tags\blocks\walls.json
 842b5e3ee5d4765e47703bb9bc389f3a2aaaeaef data\minecraft\tags\blocks\needs_iron_tool.json
 7d5fc7009b948de8ff4dc6094a4629ece9a30739 data\mccourse\tags\blocks\metal_detector_detectable_blocks.json
 db20ec8adae49d148498cf8c9b1a5d4645b472cc data\minecraft\tags\blocks\needs_stone_tool.json
+054139939470485ffcc4479b643d9d6e0f51496d data\minecraft\tags\blocks\fences.json
 a936bbbc9cc8100c2fbc966dbb92dec16462c711 data\minecraft\tags\blocks\needs_diamond_tool.json
-01db0a1340ba1789e055478d0298222620be5343 data\minecraft\tags\blocks\mineable\pickaxe.json
+1162532f611c8fd5fef2fcc7efe3716d69c304ba data\minecraft\tags\blocks\mineable\pickaxe.json
+44c98cbccbbe6c963068d9855497e95103c11746 data\minecraft\tags\blocks\fence_gates.json
