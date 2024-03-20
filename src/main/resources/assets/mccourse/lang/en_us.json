@@ -35,6 +35,13 @@
   "block.mccourse.pink_garnet_wall": "Pink Garnet Wall",
 
   "block.mccourse.pink_garnet_door": "Pink Garnet Door",
-  "block.mccourse.pink_trapdoor": "Pink Garnet Trapdoor"
+  "block.mccourse.pink_trapdoor": "Pink Garnet Trapdoor",
+
+  "item.mccourse.pink_garnet_sword": "Pink Garnet Sword",
+  "item.mccourse.pink_garnet_axe": "Pink Garnet Axe",
+  "item.mccourse.pink_garnet_hoe": "Your Ex",
+  "item.mccourse.pink_garnet_pickaxe": "Pink Garnet PickAx",
+  "item.mccourse.pink_garnet_paxel": "Pink Garnet Paxel",
+  "item.mccourse.pink_garnet_shovel": "Pink Garnet Shovel"
 
 }

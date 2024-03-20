@@ -2,8 +2,9 @@ package net.benny.mccourse.item;
 
 import net.benny.mccourse.MCCourseMod;
 import net.benny.mccourse.item.custom.MetalDetectorItem;
+import net.benny.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -28,6 +29,23 @@ public class ModItems {
 
     public static final Item PEAT_BRICK = registerItem("peat_brick",
             new Item(new FabricItemSettings()));
+    public static final Item PINK_GARNET_PICKAXE = registerItem("pink_garnet_pickaxe",
+            new PickaxeItem(ModToolMaterial.PINK_GARNET, 1, 5f,new FabricItemSettings()));
+
+    public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword",
+            new SwordItem(ModToolMaterial.PINK_GARNET,5,5.0f,new FabricItemSettings().fireproof()));
+
+    public static final Item PINK_GARNET_SHOVEL = registerItem("pink_garnet_shovel",
+            new ShovelItem(ModToolMaterial.PINK_GARNET,1,0f,new FabricItemSettings()));
+
+    public static final Item PINK_GARNET_AXE = registerItem("pink_garnet_axe",
+            new AxeItem(ModToolMaterial.PINK_GARNET,3,-1f, new FabricItemSettings()));
+
+    public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
+            new HoeItem(ModToolMaterial.PINK_GARNET,0,0.5f,new  FabricItemSettings()));
+
+    public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
+            new PaxelItem(ModToolMaterial.PINK_GARNET,0,0.5f,new  FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);
