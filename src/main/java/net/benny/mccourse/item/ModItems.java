@@ -2,6 +2,8 @@ package net.benny.mccourse.item;
 
 import net.benny.mccourse.MCCourseMod;
 import net.benny.mccourse.item.custom.MetalDetectorItem;
+import net.benny.mccourse.item.custom.ModArmorItem;
+import net.benny.mccourse.item.custom.ModPoisonSwordItem;
 import net.benny.mccourse.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
@@ -33,19 +35,31 @@ public class ModItems {
             new PickaxeItem(ModToolMaterial.PINK_GARNET, 1, 5f,new FabricItemSettings()));
 
     public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword",
-            new SwordItem(ModToolMaterial.PINK_GARNET,5,5.0f,new FabricItemSettings().fireproof()));
+            new ModPoisonSwordItem(ModToolMaterial.PINK_GARNET,5,5.0f,new FabricItemSettings().fireproof()));
 
     public static final Item PINK_GARNET_SHOVEL = registerItem("pink_garnet_shovel",
             new ShovelItem(ModToolMaterial.PINK_GARNET,1,0f,new FabricItemSettings()));
 
     public static final Item PINK_GARNET_AXE = registerItem("pink_garnet_axe",
-            new AxeItem(ModToolMaterial.PINK_GARNET,3,-1f, new FabricItemSettings()));
+            new AxeItem(ModToolMaterial.PINK_GARNET,3,-5f, new FabricItemSettings()));
 
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
             new HoeItem(ModToolMaterial.PINK_GARNET,0,0.5f,new  FabricItemSettings()));
 
     public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
             new PaxelItem(ModToolMaterial.PINK_GARNET,0,0.5f,new  FabricItemSettings()));
+
+    public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET,ArmorItem.Type.HELMET,new FabricItemSettings()));
+
+    public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
+            new ModArmorItem(ModArmorMaterials.PINK_GARNET,ArmorItem.Type.CHESTPLATE,new FabricItemSettings()));
+
+    public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET,ArmorItem.Type.LEGGINGS,new FabricItemSettings()));
+
+    public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET,ArmorItem.Type.BOOTS,new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);

@@ -7,7 +7,6 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
-import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -26,8 +25,38 @@ public class PaxelItem extends MiningToolItem {
     public PaxelItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
         super(attackDamage, attackSpeed, material, ModTags.Blocks.PAXEL_MINEABLE, settings);
     }
-    protected static final Map<Block, Block> STRIPPED_BLOCKS = new ImmutableMap.Builder<Block, Block>().put(Blocks.OAK_WOOD, Blocks.STRIPPED_OAK_WOOD).put(Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG).put(Blocks.DARK_OAK_WOOD, Blocks.STRIPPED_DARK_OAK_WOOD).put(Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG).put(Blocks.ACACIA_WOOD, Blocks.STRIPPED_ACACIA_WOOD).put(Blocks.ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG).put(Blocks.CHERRY_WOOD, Blocks.STRIPPED_CHERRY_WOOD).put(Blocks.CHERRY_LOG, Blocks.STRIPPED_CHERRY_LOG).put(Blocks.BIRCH_WOOD, Blocks.STRIPPED_BIRCH_WOOD).put(Blocks.BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG).put(Blocks.JUNGLE_WOOD, Blocks.STRIPPED_JUNGLE_WOOD).put(Blocks.JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG).put(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD).put(Blocks.SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG).put(Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM).put(Blocks.WARPED_HYPHAE, Blocks.STRIPPED_WARPED_HYPHAE).put(Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM).put(Blocks.CRIMSON_HYPHAE, Blocks.STRIPPED_CRIMSON_HYPHAE).put(Blocks.MANGROVE_WOOD, Blocks.STRIPPED_MANGROVE_WOOD).put(Blocks.MANGROVE_LOG, Blocks.STRIPPED_MANGROVE_LOG).put(Blocks.BAMBOO_BLOCK, Blocks.STRIPPED_BAMBOO_BLOCK).build();
-    protected static final Map<Block, BlockState> PATH_STATES = Maps.newHashMap(new ImmutableMap.Builder<Block, BlockState>().put(Blocks.GRASS_BLOCK, Blocks.DIRT_PATH.getDefaultState()).put(Blocks.DIRT, Blocks.DIRT_PATH.getDefaultState()).put(Blocks.PODZOL, Blocks.DIRT_PATH.getDefaultState()).put(Blocks.COARSE_DIRT, Blocks.DIRT_PATH.getDefaultState()).put(Blocks.MYCELIUM, Blocks.DIRT_PATH.getDefaultState()).put(Blocks.ROOTED_DIRT, Blocks.DIRT_PATH.getDefaultState()).build());
+    protected static final Map<Block, Block> STRIPPED_BLOCKS =
+            new ImmutableMap.Builder<Block, Block>()
+                    .put(Blocks.OAK_WOOD, Blocks.STRIPPED_OAK_WOOD)
+                    .put(Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG)
+                    .put(Blocks.DARK_OAK_WOOD, Blocks.STRIPPED_DARK_OAK_WOOD)
+                    .put(Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG)
+                    .put(Blocks.ACACIA_WOOD, Blocks.STRIPPED_ACACIA_WOOD)
+                    .put(Blocks.ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG)
+                    .put(Blocks.CHERRY_WOOD, Blocks.STRIPPED_CHERRY_WOOD)
+                    .put(Blocks.CHERRY_LOG, Blocks.STRIPPED_CHERRY_LOG)
+                    .put(Blocks.BIRCH_WOOD, Blocks.STRIPPED_BIRCH_WOOD)
+                    .put(Blocks.BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG)
+                    .put(Blocks.JUNGLE_WOOD, Blocks.STRIPPED_JUNGLE_WOOD)
+                    .put(Blocks.JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG)
+                    .put(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD)
+                    .put(Blocks.SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG)
+                    .put(Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM)
+                    .put(Blocks.WARPED_HYPHAE, Blocks.STRIPPED_WARPED_HYPHAE)
+                    .put(Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM)
+                    .put(Blocks.CRIMSON_HYPHAE, Blocks.STRIPPED_CRIMSON_HYPHAE)
+                    .put(Blocks.MANGROVE_WOOD, Blocks.STRIPPED_MANGROVE_WOOD)
+                    .put(Blocks.MANGROVE_LOG, Blocks.STRIPPED_MANGROVE_LOG)
+                    .put(Blocks.BAMBOO_BLOCK, Blocks.STRIPPED_BAMBOO_BLOCK).build();
+    protected static final Map<Block, BlockState> PATH_STATES
+            = Maps.newHashMap(
+                    new ImmutableMap.Builder<Block, BlockState>()
+                            .put(Blocks.GRASS_BLOCK, Blocks.DIRT_PATH.getDefaultState())
+                            .put(Blocks.DIRT, Blocks.DIRT_PATH.getDefaultState())
+                            .put(Blocks.PODZOL, Blocks.DIRT_PATH.getDefaultState())
+                            .put(Blocks.COARSE_DIRT, Blocks.DIRT_PATH.getDefaultState())
+                            .put(Blocks.MYCELIUM, Blocks.DIRT_PATH.getDefaultState())
+                            .put(Blocks.ROOTED_DIRT, Blocks.DIRT_PATH.getDefaultState()).build());
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
@@ -98,6 +127,8 @@ public class PaxelItem extends MiningToolItem {
     }
 
     private Optional<BlockState> getStrippedState(BlockState state) {
-        return Optional.ofNullable(STRIPPED_BLOCKS.get(state.getBlock())).map(block -> (BlockState)block.getDefaultState().with(PillarBlock.AXIS, state.get(PillarBlock.AXIS)));
+        return Optional.ofNullable(STRIPPED_BLOCKS
+                .get(state.getBlock()))
+                .map(block -> (BlockState)block.getDefaultState().with(PillarBlock.AXIS, state.get(PillarBlock.AXIS)));
     }
 }
